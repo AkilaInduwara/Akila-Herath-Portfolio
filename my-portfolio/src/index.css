@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Optional tiny base tweak */
+:root { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
