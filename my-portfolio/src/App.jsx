@@ -17,16 +17,16 @@ import {
 
 // ---------- Quick data you can customize ----------
 const PROFILE = {
-  name: "Your Name",
-  role: "Full-Stack Developer",
+  name: "Akila Induwara Herath",
+  role: "Software Engineer",
   location: "Colombo, Sri Lanka",
   blurb:
     "I design and build delightful web apps. I care about performance, accessibility, and clean UI.",
-  email: "you@example.com",
-  phone: "+94 7X XXX XXXX",
+  email: "akilainduwara@gmail.com",
+  phone: "+94 71 433 0705",
   socials: [
-    { name: "GitHub", href: "https://github.com/", icon: Github },
-    { name: "LinkedIn", href: "https://linkedin.com/in/", icon: Linkedin },
+    { name: "GitHub", href: "https://github.com/AkilaInduwara", icon: Github },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/akilainduwara/", icon: Linkedin },
     { name: "Website", href: "https://yourdomain.com", icon: Globe }
   ]
 };
@@ -104,10 +104,10 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    program: "BSc (Hons) in Information Systems",
+    program: "Higher Diploma in Information Technology",
     org: "SLIIT",
-    period: "2021 – 2025",
-    note: "Final year project: AI-driven geospatial platform for spice cultivation."
+    period: "2021 – 2024",
+    // note: "Final year project: AI-driven geospatial platform for spice cultivation."
   },
   {
     program: "CIMA Operational Level (in progress)",
