@@ -21,7 +21,7 @@ const PROFILE = {
   role: "Software Engineer",
   location: "Kegalle, Sri Lanka",
   blurb:
-    "Looking for job opportunities. Open to work.",
+    "Open to work.",
   email: "akilainduwara@gmail.com",
   phone: "+94 71 433 0705",
   socials: [
@@ -81,25 +81,17 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    role: "Fund Administrator",
-    company: "HSBC",
-    period: "Aug 2024 – Present",
+    role: "IT Intern",
+    company: " Citizens Development Business Finance PLC (CDB Head Office - IT Department)",
+    period: "Nov 2024 – May 2025",
     location: "Colombo",
     bullets: [
-      "Daily NAV and cash reconciliation across multi-asset funds.",
-      "Built internal scripts to automate variance checks (-35% manual effort)."
+      "Assisted in various development projects for the company's ERP system, focusing on UI design and database query development.",
+      "Worked with HTML, CSS, JavaScript, and SQL to contribute to the project’s progress.",
+      "Gained hands-on experience in organizational workflows and the functioning of development teams."
     ]
   },
-  {
-    role: "Software Engineering Intern",
-    company: "Your Company",
-    period: "Jan 2024 – Jul 2024",
-    location: "Remote",
-    bullets: [
-      "Implemented authentication & role-based dashboards (React/Node).",
-      "Improved page speed to 95+ Lighthouse with code-splitting and caching."
-    ]
-  }
+  
 ];
 
 const EDUCATION = [
@@ -296,7 +288,7 @@ export default function Portfolio() {
           <motion.div {...fade}>
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-7">
-                <p className="text-sm text-slate-500 dark:text-slate-400">Hello, I'm</p>
+                <p className="text-2xl text-slate-500 dark:text-slate-400">Hello, I'm</p>
                 <h1 className="mt-2 text-4xl md:text-6xl font-extrabold leading-tight">
                   {PROFILE.name}
                 </h1>
@@ -332,9 +324,8 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <div className="mt-4 text-sm text-slate-500 dark:text-slate-400">
-                    <p>
-                      <strong className="text-slate-900 dark:text-slate-100">Contact:</strong> {PROFILE.email} · {PROFILE.phone}
-                    </p>
+                    <div><p className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> {PROFILE.email}</p></div>
+                <div><p className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> {PROFILE.phone}</p></div>
                   </div>
               </div>
               {/* <div className="md:col-span-5">
@@ -364,12 +355,12 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="p-6 md:col-span-2">
                 <p className="leading-relaxed text-slate-500 dark:text-slate-400">
-                  I’m a motivated, adaptable Software Engineer with a BSc (Hons) in Software Engineering (Second Class Upper Division) and a Higher Diploma in IT. I’m skilled across multiple programming languages and frameworks, with a strong foundation from academic and hands-on projects. I’m now seeking full-time Software Engineering opportunities where I can contribute, learn, and continuously improve.
+                  I’m a motivated, adaptable Software Engineer with a BSc (Hons) in Software Engineering (Second Class Upper Division) and a Higher Diploma in IT. I’m skilled across multiple programming languages and frameworks, with a strong foundation from academic and hands-on projects.
                 </p>
                 <ul className="mt-4 list-disc pl-6 space-y-1 text-sm text-slate-500 dark:text-slate-400">
-                  {/* <li>Focus areas: UI/UX, performance, DX, automation</li>
+                  <li>Focus areas: UI/UX, performance, DX, automation</li>
                   <li>Values: clarity, ownership, kindness</li>
-                  <li>Hobbies: maps, photography, teaching</li> */}
+                  <li>Hobbies: maps, photography, teaching</li>
                 </ul>
               </Card>
               <Card className="p-6">
@@ -430,10 +421,16 @@ export default function Portfolio() {
                 <div className="absolute -left-1.5 mt-1 h-3 w-3 rounded-full bg-blue-600 dark:bg-cyan-400" />
                 <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-500 dark:text-slate-400">
                   <span className="font-semibold text-slate-900 dark:text-slate-100">{x.role}</span>
-                  <span>@ {x.company}</span>
-                  <span>• {x.period}</span>
-                  <span>• {x.location}</span>
                 </div>
+                <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-500 dark:text-slate-400">
+                  <span>{x.company}</span>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-500 dark:text-slate-400">
+                  <span>{x.location}</span>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-500 dark:text-slate-400">
+                  <span>{x.period}</span>
+                </div>                
                 <ul className="mt-2 list-disc pl-6 space-y-1 text-sm text-slate-500 dark:text-slate-400">
                   {x.bullets.map((b) => (
                     <li key={b}>{b}</li>
@@ -500,8 +497,8 @@ export default function Portfolio() {
             <Card className="p-6">
               <h3 className="font-semibold">Reach me</h3>
               <div className="mt-4 space-y-3 text-sm text-slate-500 dark:text-slate-400">
-                <p className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> {PROFILE.email}</p>
-                <p className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> {PROFILE.phone}</p>
+                <div><p className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> {PROFILE.email}</p></div>
+                <div><p className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> {PROFILE.phone}</p></div>                
                 <div className="flex items-center gap-2 mt-2">
                   {PROFILE.socials.map((s) => (
                     <a key={s.name} href={s.href} target="_blank" rel="noreferrer" className="rounded-xl border px-3 py-2 inline-flex items-center gap-2 hover:shadow">
