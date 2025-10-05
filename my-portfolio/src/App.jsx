@@ -19,9 +19,9 @@ import {
 const PROFILE = {
   name: "Akila Induwara Herath",
   role: "Software Engineer",
-  location: "Colombo, Sri Lanka",
+  location: "Kegalle, Sri Lanka",
   blurb:
-    "I design and build delightful web apps. I care about performance, accessibility, and clean UI.",
+    "Looking for job opportunities. Open to work.",
   email: "akilainduwara@gmail.com",
   phone: "+94 71 433 0705",
   socials: [
@@ -32,18 +32,18 @@ const PROFILE = {
 };
 
 const SKILLS = [
-  "JavaScript (ES202x)",
+  "JavaScript",
   "TypeScript",
-  "React / Next.js",
-  "Node.js / Express",
+  "React ",
+  // "Node.js / Express",
   "Python",
-  "Java / Spring",
+  "Java",
   "Tailwind CSS",
-  "PostgreSQL / MySQL",
-  "Prisma / ORM",
-  "REST / GraphQL",
-  "CI/CD",
-  "Cloud (Vercel, Netlify, AWS)"
+  "MySQL",
+  // "Prisma / ORM",
+  // "REST / GraphQL",
+  // "CI/CD",
+  // "Cloud (Vercel, Netlify, AWS)"
 ];
 
 const PROJECTS = [
@@ -104,17 +104,19 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
+    program: "Bsc (Hons) in Software Engineering",
+    org: "SLIIT, University of Bedfordshire",
+    period: "2025 Jan – 2025 Sep",
+    // note: "E1 • P1 • F1"
+    // note: "Final year project: AI-driven geospatial platform for spice cultivation."
+  },
+  {
     program: "Higher Diploma in Information Technology",
     org: "SLIIT",
     period: "2021 – 2024",
     // note: "Final year project: AI-driven geospatial platform for spice cultivation."
-  },
-  {
-    program: "CIMA Operational Level (in progress)",
-    org: "CIMA",
-    period: "2025 – ",
-    note: "E1 • P1 • F1"
   }
+  
 ];
 
 const TESTIMONIALS = [
@@ -254,9 +256,9 @@ export default function Portfolio() {
       <header className="sticky top-0 z-50 backdrop-blur bg-white/60 dark:bg-neutral-900/60 border-b">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex h-16 items-center justify-between">
-            <a href="#home" className="font-extrabold tracking-tight text-lg md:text-xl">
+            {/* <a href="#home" className="font-extrabold tracking-tight text-lg md:text-xl">
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Portfolio</span>
-            </a>
+            </a> */}
             <nav className="hidden md:flex items-center gap-1">
               {nav.map((n) => (
                 <NavLink key={n.href} href={n.href}>{n.label}</NavLink>
@@ -329,8 +331,13 @@ export default function Portfolio() {
                     </a>
                   ))}
                 </div>
+                <div className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+                    <p>
+                      <strong className="text-slate-900 dark:text-slate-100">Contact:</strong> {PROFILE.email} · {PROFILE.phone}
+                    </p>
+                  </div>
               </div>
-              <div className="md:col-span-5">
+              {/* <div className="md:col-span-5">
                 <Card className="p-4">
                   <img
                     src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop"
@@ -343,7 +350,7 @@ export default function Portfolio() {
                     </p>
                   </div>
                 </Card>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -357,13 +364,12 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="p-6 md:col-span-2">
                 <p className="leading-relaxed text-slate-500 dark:text-slate-400">
-                  I’m a product-minded engineer who enjoys shaping ideas into polished, fast, and accessible
-                  experiences. I love working across the stack, from APIs and databases to pixel-perfect UI.
+                  I’m a motivated, adaptable Software Engineer with a BSc (Hons) in Software Engineering (Second Class Upper Division) and a Higher Diploma in IT. I’m skilled across multiple programming languages and frameworks, with a strong foundation from academic and hands-on projects. I’m now seeking full-time Software Engineering opportunities where I can contribute, learn, and continuously improve.
                 </p>
                 <ul className="mt-4 list-disc pl-6 space-y-1 text-sm text-slate-500 dark:text-slate-400">
-                  <li>Focus areas: UI/UX, performance, DX, automation</li>
+                  {/* <li>Focus areas: UI/UX, performance, DX, automation</li>
                   <li>Values: clarity, ownership, kindness</li>
-                  <li>Hobbies: maps, photography, teaching</li>
+                  <li>Hobbies: maps, photography, teaching</li> */}
                 </ul>
               </Card>
               <Card className="p-6">
@@ -374,7 +380,8 @@ export default function Portfolio() {
                       <div className="font-medium inline-flex items-center gap-2">
                         <GraduationCap className="h-4 w-4" /> {e.program}
                       </div>
-                      <div className="text-slate-500 dark:text-slate-400">{e.org} • {e.period}</div>
+                      <div className="text-slate-500 dark:text-slate-400">{e.org}</div>
+                      <div className="text-slate-500 dark:text-slate-400">{e.period}</div>
                       {e.note && <div className="text-slate-500 dark:text-slate-400 mt-1">{e.note}</div>}
                     </div>
                   ))}
